@@ -22,7 +22,7 @@ function App() {
     const handleAlturaChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const num = Number(value);
-        if (num >= 0 && num <= 220 || value === "") {
+        if (num > 0 && num <= 220 || value === "") {
             setAltura(value);
         }
     }
@@ -30,7 +30,7 @@ function App() {
     const handlePesoChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const num = Number(value);
-        if (num >= 0 && num <= 400 || value === "" ) {
+        if (num > 0 && num <= 400 || value === "" ) {
             setPeso(value);
         }
     }
@@ -38,7 +38,7 @@ function App() {
     const handleEdadChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const num = Number(value);
-        if (num >= 0 && num <= 110 || value === "") {
+        if (num > 0 && num <= 110 || value === "") {
             setEdad(value);
         }
     }
