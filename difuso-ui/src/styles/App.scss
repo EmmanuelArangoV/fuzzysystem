@@ -1,0 +1,152 @@
+$bg: #140f4b;
+$card-bg: #ffffff;
+$text: #1f2241;
+$muted: #7a7e9b;
+$accent: #2a40ff;
+$ok: #8ccf4f;
+$shadow: 0 10px 25px rgba(0,0,0,.08);
+
+$gap: 24px;
+$radius: 8px;
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: $bg;
+  color: $text;
+  display: grid;
+  min-height: 100dvh;
+  padding: 2px 16px;
+}
+
+.App-Main {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.Card {
+  background: $card-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow: hidden;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1.2fr 1px 1fr;
+    gap: 0;
+    padding: 28px clamp(16px, 3vw, 40px);
+    align-items: center;
+  }
+}
+
+.Left-Box {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    font-size: .78rem;
+    letter-spacing: .06em;
+    color: $muted;
+    font-weight: 700;
+  }
+
+  .field {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    border: 2px solid #d9f1ea;
+    border-radius: 999px;
+    padding: 8px 14px;
+
+    input {
+      border: 0;
+      outline: 0;
+      width: 90px;
+      font-size: 1.1rem;
+      text-align: right;
+    }
+    .unit {
+      color: #3bb59f;
+      font-weight: 700;
+      border-left: 1px solid #dfe8f0;
+      padding-left: 10px;
+    }
+  }
+}
+
+.Divider {
+  width: 1px;
+  height: 100%;
+  background: #e9edf5;
+}
+
+.Right-Box {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+
+  h2 {
+    margin: 0;
+    font-size: .85rem;
+    letter-spacing: .06em;
+    color: $muted;
+  }
+
+  .bmi {
+    font-size: clamp(56px, 8vw, 92px);
+    line-height: 1;
+    color: $ok;
+    font-weight: 700;
+    margin: 4px 0 6px;
+  }
+
+  .summary {
+    margin: 0;
+    color: #3b3f5c;
+    strong { font-weight: 800; color: #1e2144; }
+  }
+}
+
+.custom-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #ffffff;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.Bottom-Box {
+  border-top: 1px solid #e9edf5;
+  padding: 18px clamp(16px, 3vw, 40px) 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: .06em;
+    color: $muted;
+  }
+
+}
